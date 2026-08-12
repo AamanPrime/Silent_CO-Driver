@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ===== CSS Custom Properties (Design Tokens) ===== */
+:root {
+  /* Core Colors */
+  --bg-primary: #06060b;
+  --bg-secondary: #0c0c14;
+  --bg-card: rgba(14, 14, 24, 0.85);
+  --bg-card-hover: rgba(20, 20, 35, 0.9);
+
+  /* Accent Colors */
+  --accent-green: #00ff87;
+  --accent-green-dim: rgba(0, 255, 135, 0.15);
+  --accent-red: #ff2d55;
+  --accent-red-dim: rgba(255, 45, 85, 0.15);
+  --accent-amber: #ffb800;
+  --accent-amber-dim: rgba(255, 184, 0, 0.15);
+  --accent-blue: #007aff;
+  --accent-blue-dim: rgba(0, 122, 255, 0.15);
+
+  /* Text */
+  --text-primary: #f0f0f5;
+  --text-secondary: #8a8a9a;
+  --text-muted: #4a4a5a;
+
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-medium: rgba(255, 255, 255, 0.1);
+
+  /* Shadows */
+  --shadow-glow-green: 0 0 30px rgba(0, 255, 135, 0.2);
+  --shadow-glow-red: 0 0 30px rgba(255, 45, 85, 0.3);
+  --shadow-glow-amber: 0 0 30px rgba(255, 184, 0, 0.2);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+
+  /* Spacing */
+  --gap: 16px;
+  --radius: 16px;
+  --radius-sm: 10px;
+
+  /* Typography */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Orbitron', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* ===== Utility Classes ===== */
+.glass-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: var(--border-medium);
+}
+
+.section-label {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+/* ===== Animations ===== */
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 135, 0.2), inset 0 0 20px rgba(0, 255, 135, 0.05); }
+  50% { box-shadow: 0 0 40px rgba(0, 255, 135, 0.4), inset 0 0 30px rgba(0, 255, 135, 0.1); }
+}
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 45, 85, 0.3), inset 0 0 20px rgba(255, 45, 85, 0.05); }
+  50% { box-shadow: 0 0 50px rgba(255, 45, 85, 0.6), inset 0 0 30px rgba(255, 45, 85, 0.15); }
+}
+
+@keyframes pulse-amber {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 184, 0, 0.2), inset 0 0 20px rgba(255, 184, 0, 0.05); }
+  50% { box-shadow: 0 0 40px rgba(255, 184, 0, 0.4), inset 0 0 30px rgba(255, 184, 0, 0.1); }
+}
+
+@keyframes pulse-blue {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 122, 255, 0.2), inset 0 0 20px rgba(0, 122, 255, 0.05); }
+  50% { box-shadow: 0 0 40px rgba(0, 122, 255, 0.4), inset 0 0 30px rgba(0, 122, 255, 0.1); }
+}
+
+@keyframes pulse-critical {
+  0%, 100% { box-shadow: 0 0 25px rgba(255, 0, 0, 0.4), inset 0 0 20px rgba(255, 0, 0, 0.1); }
+  50% { box-shadow: 0 0 60px rgba(255, 0, 0, 0.7), inset 0 0 40px rgba(255, 0, 0, 0.2); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typewriter-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes border-glow-red {
+  0%, 100% { border-color: rgba(255, 45, 85, 0.3); }
+  50% { border-color: rgba(255, 45, 85, 0.7); }
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.shimmer-loading {
+  background: linear-gradient(
+    90deg,
+    var(--bg-card) 25%,
+    rgba(255, 255, 255, 0.04) 50%,
+    var(--bg-card) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}

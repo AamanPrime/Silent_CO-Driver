@@ -1,0 +1,28 @@
+# Node & Web
+node_modules/
+dist/
+build/
+.npm
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+.venv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Project specific
+*.mp3
+*.wav

@@ -1,0 +1,17 @@
+[
+  { "lap": 35, "time": 83.8, "sector1": 27.9, "sector2": 28.1, "sector3": 27.8, "tireAge": 12, "compound": "Medium" },
+  { "lap": 36, "time": 83.6, "sector1": 27.8, "sector2": 27.9, "sector3": 27.9, "tireAge": 13, "compound": "Medium" },
+  { "lap": 37, "time": 83.9, "sector1": 28.0, "sector2": 28.0, "sector3": 27.9, "tireAge": 14, "compound": "Medium" },
+  { "lap": 38, "time": 84.1, "sector1": 28.0, "sector2": 28.1, "sector3": 28.0, "tireAge": 15, "compound": "Medium" },
+  { "lap": 39, "time": 84.0, "sector1": 27.9, "sector2": 28.1, "sector3": 28.0, "tireAge": 16, "compound": "Medium" },
+  { "lap": 40, "time": 84.2, "sector1": 28.1, "sector2": 28.0, "sector3": 28.1, "tireAge": 17, "compound": "Medium" },
+  { "lap": 41, "time": 84.5, "sector1": 28.2, "sector2": 28.1, "sector3": 28.2, "tireAge": 18, "compound": "Medium" },
+  { "lap": 42, "time": 85.3, "sector1": 28.5, "sector2": 28.4, "sector3": 28.4, "tireAge": 19, "compound": "Medium", "event": "Radio message received" },
+  { "lap": 43, "time": 86.1, "sector1": 28.8, "sector2": 28.7, "sector3": 28.6, "tireAge": 20, "compound": "Medium" },
+  { "lap": 44, "time": 86.8, "sector1": 29.0, "sector2": 28.9, "sector3": 28.9, "tireAge": 21, "compound": "Medium" },
+  { "lap": 45, "time": 87.5, "sector1": 29.2, "sector2": 29.1, "sector3": 29.2, "tireAge": 22, "compound": "Medium" },
+  { "lap": 46, "time": 87.2, "sector1": 29.1, "sector2": 29.0, "sector3": 29.1, "tireAge": 23, "compound": "Medium" },
+  { "lap": 47, "time": 84.0, "sector1": 27.9, "sector2": 28.0, "sector3": 28.1, "tireAge": 1, "compound": "Hard", "event": "Pit stop - Fresh tires" },
+  { "lap": 48, "time": 83.5, "sector1": 27.7, "sector2": 27.9, "sector3": 27.9, "tireAge": 2, "compound": "Hard" },
+  { "lap": 49, "time": 83.3, "sector1": 27.6, "sector2": 27.8, "sector3": 27.9, "tireAge": 3, "compound": "Hard" }
+]
