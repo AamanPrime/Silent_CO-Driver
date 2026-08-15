@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Demo radio samples used by the live demo — keep, despite the *.log/*.wav-style patterns above
+!public/samples/*.wav
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
